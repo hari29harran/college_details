@@ -3,9 +3,19 @@
     {
         "mail_id": "kongu.edu",
         
-        "website": "https://kongu.ac.in/"},
+        "college": "Kongu Engineering College"},
     {
         "mail_id": "gmail.com",
         
-        "website": "https://google.co.in/"
+        "college": "Google"
+    },
+	{
+        "mail_id": "kongu.ac.in",
+        
+        "college": "Kongu Engineering College"
+    },
+	{
+        "mail_id": "sonatech.ac.in",
+        
+        "college": "Sona College of Technology"
     }];

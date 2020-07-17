@@ -36,6 +36,7 @@
         <div class="form-group">
             <button id="submit" class="btn btn-primary btn-block">Get College Website</button>
         </div>     
+        <div class="c text-center text-success"></div>
    		<div class="res text-center text-danger" id="res"></div>
     </div>
 	</div>
@@ -44,6 +45,7 @@
 		$('#email').focus(function()
 		{
 			$('.res').hide();	
+			$('.c').hide();	
 		});
 		$('#submit').click(function()
 		{
@@ -53,7 +55,8 @@
 			 $.each(colleges, function(key, val) {
 					   if(val.mail_id == id[1])
 					   {
-					   	window.open(val.website,'_blank');
+					   	$('.c').show();
+					   	$('.c').html("This Email ID belongs to <b>"+val.college+"</b>");
 					   	$('#email').val(" ");
 					   	i++;
 					   	return false;
