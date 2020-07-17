@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>College Details</title>
+	<title>Home</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -36,23 +36,35 @@
         <div class="form-group">
             <button id="submit" class="btn btn-primary btn-block">Get College Website</button>
         </div>     
+   		<div class="res text-center text-danger" id="res"></div>
     </div>
 	</div>
 	<script type="text/javascript" src="colleges.json"></script>
 	<script type="text/javascript">
+		$('#email').focus(function()
+		{
+			$('.res').hide();	
+		});
 		$('#submit').click(function()
 		{
 			var email=$('#email').val();
 			var id=email.split("@");
+			var i=0;
 			 $.each(colleges, function(key, val) {
 					   if(val.mail_id == id[1])
 					   {
 					   	window.open(val.website,'_blank');
-						 $('#email').val(" ");
+					   	$('#email').val(" ");
+					   	i++;
 					   	return false;
 					   }
 					   
 			});
+			 if(i==0)
+			 {
+			 	$('.res').show();
+			 	$('.res').html("College Not Available/Invalid Email ID");
+			 }
 		});
 	</script>
 </body>
