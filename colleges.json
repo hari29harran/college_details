@@ -1,0 +1,11 @@
+
+   var colleges= [
+    {
+        "mail_id": "kongu.edu",
+        
+        "website": "https://kongu.ac.in/"},
+    {
+        "mail_id": "gmail.com",
+        
+        "website": "https://google.co.in/"
+    }];
